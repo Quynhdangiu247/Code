@@ -1,8 +1,10 @@
 {
-    "rewrites": [
-        {
-            "source":"/(.*)",
-            "destination":"/template/index.html"
-        }
-    ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "btl1.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [{ "src": "/(.*)", "dest": "btl1.py" }]
+  }
